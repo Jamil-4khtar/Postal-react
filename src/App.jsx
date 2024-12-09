@@ -10,8 +10,8 @@ function App() {
       {/* <SearchPage/> */}
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<SearchPage/>} />
-          <Route path='/results' element={<ResultsPage/>} />
+          <Route path='/postal-react' element={<SearchPage/>} />
+          <Route path='/postal-react/results' element={<ResultsPage/>} />
           
         </Routes>
       </BrowserRouter>

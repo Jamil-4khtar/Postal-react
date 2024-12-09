@@ -33,7 +33,7 @@ function SearchPage() {
                 console.log("🚀 ~ handleChange ~ data:", data)
 
                 if (data.Status == "Success") {
-                    navigate(`/results?pincode=${searchValue}`, { state: {data: data}});
+                    navigate(`/postal-react/results?pincode=${searchValue}`, { state: {data: data}});
                 } else {
                     console.error(data.Message);
                     // errorMsg = data.Message;

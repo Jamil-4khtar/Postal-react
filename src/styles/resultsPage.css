@@ -1,0 +1,80 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#input-div {
+    position: relative;
+}
+
+#input-div #span {
+    z-index: 10;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    font-size: 20px;
+}
+
+#input-div input {
+    z-index: 5;
+    height: 28px;
+    width: 100%;
+    padding-left: 30px;
+    border: 1px solid black;
+    border-radius: 3px;
+    outline: none;
+
+}
+
+#results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 10px;
+    padding-bottom: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlideUp 1s forwards;
+}
+
+#results div {
+    padding: 10px;
+    line-height: 25px;
+    border: 1px solid black;
+    border-radius: 3px;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+#results div:hover {
+    transform: scale(1.02);
+    background-color: #ebeaea;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#input-div input {
+    z-index: 5;
+    height: 28px;
+    width: 100%;
+    padding-left: 30px;
+    border: 1px solid black;
+    border-radius: 3px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#input-div input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
